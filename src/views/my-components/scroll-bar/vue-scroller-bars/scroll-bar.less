@@ -1,0 +1,32 @@
+@prefix: ~'vue-scroller-bars';
+
+.@{prefix}{
+	&-wraper{
+		height: 100%;
+    	width: 100%;
+		overflow: auto;
+		position: relative;
+		&.show-when-hover{
+			.@{prefix}-scroll{
+				opacity: 0;
+			}
+			.@{prefix}-place-holder{
+				opacity: 0;
+			}
+		}
+		&.show-when-hover:hover{
+			.@{prefix}-scroll{
+				opacity: 1;
+			}
+			.@{prefix}-place-holder{
+				opacity: 1;
+			}
+		}
+	}
+	&-content{
+		position: absolute;
+		min-width: 100%;
+		left: 0;
+		top: 0;
+	}
+}

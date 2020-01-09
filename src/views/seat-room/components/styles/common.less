@@ -1,0 +1,50 @@
+@border: 1px solid #c7c3c3;
+.item {
+    border: @border;
+    text-align: center;
+
+    .item-main {
+        height: 120px;
+        line-height: 120px;
+        border-bottom: @border;
+
+        .item-status {
+            .is-empty {
+                font-size: 18px;
+                color: rgb(100,100,100);
+                font-weight: bold;
+            }
+            .status-content {
+                margin-top: 36px;
+                line-height: 1.4;
+
+                .title {
+                    font-size: 18px;
+                    color: rgb(100,100,100);
+                    font-weight: bold;
+                }
+                .sup {
+                    font-size: 14px;
+                }
+            }
+        }
+        .item-name {
+            font-size: 18px;
+            color: rgb(100,100,100);
+            font-weight: bold;
+			border-left: @border;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+        }
+    }
+    .item-footer {
+        height: 50px;
+        line-height: 50px;
+    }
+
+}
+
+abbr[title] {
+	text-decoration: none;
+}

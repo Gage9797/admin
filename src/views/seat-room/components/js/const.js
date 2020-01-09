@@ -1,0 +1,12 @@
+
+// rooms | seats 当前状态
+const
+	STATUS_EMPTY = 0,
+	STATUS_USING = 1,
+	STATUS_RESERVED = 2;
+
+export {
+	STATUS_EMPTY,
+	STATUS_USING,
+	STATUS_RESERVED
+};

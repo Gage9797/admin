@@ -1,0 +1,57 @@
+
+@page {
+    margin: 0;
+}
+
+#print-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    // height: 100%;
+    padding: 4px;
+    font-size: 12px;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    page-break-after: avoid;
+}
+.order-info, .goods-info, .pay-info {
+    margin: 16px 0;
+    background-color: #fff;
+}
+
+.title{
+    text-align: center;
+}
+.hint{
+    margin: 16px 0;
+    color: gray;
+    font-size: 12px;
+}
+.bar-code{
+    text-align: center;
+}
+.bar-code-img{
+    width: 50%;
+    height: 2%;
+}
+.qr-code{
+    display: flex;
+    width: 260px;
+}
+.qr-code-left, .qr-code-right{
+    flex: 1;
+    text-align: center;
+    // margin-left: 4px;
+    box-sizing: border-box;
+}
+.qr-code-img {
+    display: block;
+    width: 100%;
+}
+
+.qr-code-right{
+    padding: 20px;
+    margin-top: -20px;
+}
+

@@ -1,0 +1,241 @@
+@import '~@/styles/common.less';
+
+.lock-screen-back{
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: 0 0 0 0 #667aa6 inset;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all 3s;
+}
+.main{
+    position: absolute;
+	width: 100%;
+	min-width: 960px;
+    height: 100%;
+    .unlock-con{
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 11000;
+    }
+    .sidebar-menu-con{
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 21;
+        transition: width .3s;
+        background: rgb(73, 80, 96)
+    }
+    .layout-text{
+        display: inline-block;
+        white-space:nowrap;
+        position: absolute;
+    }
+    &-content-container{
+        position: relative;
+    }
+    &-header-con{
+        box-sizing: border-box;
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 60px;
+        z-index: 22;
+        box-shadow: 0 2px 1px 1px rgba(100,100,100,.1);
+        transition: padding .3s;
+        .main-header {
+            background: #464c5b;
+        }
+	}
+	&-notice-bar {
+		position: fixed;
+		top: 60px;
+		// left: 200px;
+		padding-left: 200px;
+		width: 100%;
+		z-index: 20;
+	}
+	&-overlay {
+		position: fixed;
+		right: 40px;
+		bottom: 60px;
+		z-index: 20;
+	}
+    &-breadcrumb{
+        padding: 8px 15px 0;
+    }
+    &-menu-left{
+        background: #464c5b;
+        height: 100%;
+    }
+    .tags-con{
+        height: 40px;
+        z-index: -1;
+        overflow: hidden;
+        background: #f0f0f0;
+        .tags-outer-scroll-con{
+            position: relative;
+            box-sizing: border-box;
+            padding-right: 120px;
+            width: 100%;
+            height: 100%;
+            .tags-inner-scroll-body{
+                position: absolute;
+                padding: 2px 10px;
+                overflow: visible;
+                white-space: nowrap;
+                transition: left .3s ease;
+            }
+            .close-all-tag-con{
+                position: absolute;
+                right: 0;
+                top: 0;
+                box-sizing: border-box;
+                padding-top: 8px;
+                text-align: center;
+                width: 110px;
+                height: 100%;
+                background: white;
+                box-shadow: -3px 0 15px 3px rgba(0, 0, 0, .1);
+                z-index: 10;
+            }
+        }
+    }
+    &-header{
+        height: 60px;
+        position: relative;
+        z-index: 11;
+        display: flex;
+        .logo-wrapper {
+            flex: 0 0 200px;
+            width: 200px;
+            height: 60px;
+            background: #313540;
+            padding-top: 8px;
+            text-align: center;
+            img {
+                width: 180px;
+                height: 44px;
+            }
+        }
+        .header-right {
+            flex: 1;
+            box-shadow: 0 2px 1px 1px rgba(100,100,100,.1);
+            .header-title {
+                display: inline-block;
+                vertical-align: top;
+                height: 60px;
+				// width: 200px;
+				padding: 0 20px;
+                text-align: center;
+                line-height: 60px;
+                font-size: 22px;
+                color: #c3a451;
+            }
+            .navicon-con{
+                margin: 6px;
+                display: inline-block;
+            }
+            .header-avator-con{
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 100%;
+                width: 240px;
+                .switch-theme-con{
+                    display: inline-block;
+                    width: 40px;
+                    height: 100%;
+                }
+                .message-con{
+                    display: inline-block;
+                    width: 30px;
+                    padding: 18px 0;
+                    text-align: center;
+                    cursor: pointer;
+                    i{
+                        vertical-align: middle;
+                    }
+                }
+                .change-skin{
+                    font-size: 14px;
+                    font-weight: 500;
+                    padding-right: 5px;
+                }
+                .switch-theme{
+                    height: 100%;
+                }
+                .user-dropdown{
+                    &-menu-con{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: auto;
+                        height: 100%;
+                    }
+                    &-innercon{
+                        height: 100%;
+                        padding-right: 14px;
+                    }
+                }
+                .full-screen-btn-con{
+                    display: inline-block;
+                    width: 30px;
+                    padding: 18px 0;
+                    text-align: center;
+                    cursor: pointer;
+                    i{
+                        vertical-align: middle;
+                    }
+                }
+                .lock-screen-btn-con{
+                    display: inline-block;
+                    width: 30px;
+                    padding: 18px 0;
+                    text-align: center;
+                    cursor: pointer;
+                    i{
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+
+    }
+    .single-page-con{
+        position: absolute;
+        top: 60px;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        background-color: #F0F0F0;
+        // z-index: 1;
+        transition: left .3s;
+        .single-page{
+            margin: 15px;
+        }
+    }
+    &-copy{
+        text-align: center;
+        padding: 10px 0 20px;
+        color: #9ea7b4;
+    }
+}
+.taglist-moving-animation-move{
+    transition: transform .3s;
+}
+
+.big-bg {
+	width: 100%;
+    height: 100%;
+    background-image: url('../images/login-bg.png');
+    background-size: 100% 100%;
+    background-position: center;
+    position: relative;
+}
