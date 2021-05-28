@@ -39,7 +39,7 @@
     "simplemde": "^1.11.2",
     "sortablejs": "^1.7.0",
     "stompjs": "^2.3.3",
-    "tinymce": "^4.7.4",
+    "tinymce": "^5.7.1",
     "vue": "^2.5.13",
     "vue-router": "^3.0.1",
     "vue-virtual-scroller": "^0.10.6",
